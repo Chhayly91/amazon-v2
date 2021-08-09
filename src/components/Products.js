@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
-import Currency from "react-currency-formatter";
+import Currency from "react-currency-formatter-v2";
 import prime from "../../public/prime.png";
 
 export default function Products({
@@ -25,7 +25,13 @@ export default function Products({
         {category}
       </p>
 
-      <Image src={image} width={200} height={200} objectFit="contain" />
+      <Image
+        src={image}
+        width={200}
+        height={200}
+        objectFit="contain"
+        alt="cloth"
+      />
 
       <h4>{title}</h4>
 
@@ -44,7 +50,13 @@ export default function Products({
 
       {hasPrime && (
         <div className="flex items-center space-x-2 -mt-6 mb-2">
-          <Image src={prime} width={60} height={40} objectFit="contain" />
+          <Image
+            src={prime}
+            width={60}
+            height={40}
+            objectFit="contain"
+            alt="prime pic"
+          />
           <p className="text-xs text-gray-500">FREE Next-day delivery</p>
         </div>
       )}

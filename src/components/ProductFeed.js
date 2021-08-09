@@ -20,7 +20,7 @@ export default function ProductFeed({ products }) {
           />
         ))}
       <div className="md:col-span-full m-3">
-        <Image src={bannerAdvertise} objectFit="contain" />
+        <Image src={bannerAdvertise} objectFit="contain" alt="atvertise" />
       </div>
 
       <div className="md:col-span-2">
