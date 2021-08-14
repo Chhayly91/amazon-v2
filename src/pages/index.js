@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import ProductFeed from "../components/ProductFeed";
+import { getSession } from "next-auth/client";
 
 export default function Home({ products }) {
   // console.log(typeof products);
@@ -26,11 +27,12 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps(context) {
+  const session = await getSession(context);
+  //get Data from Fake Store API
   const products = await fetch("https://fakestoreapi.com/products").then(
     (res) => res.json()
   );
   return {
-    props: { products }, // will be passed to the page component as props
+    props: { products, session }, // will be passed to the page component as props
   };
 }
-//get Data from Fake Store API

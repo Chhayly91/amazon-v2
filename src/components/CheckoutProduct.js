@@ -38,7 +38,7 @@ export default function CheckoutProduct({
 
   return (
     <div className="grid grid-cols-5">
-      <Image src={image} width={200} height={200} objectFit="contain" />
+      <Image src={image} width={200} height={200} objectFit="contain" alt="" />
 
       {/* Middle */}
       <div className="col-span-3 mx-5">
