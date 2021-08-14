@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import { CheckCircleIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 
-function success() {
+function Success() {
   const router = useRouter();
   return (
     <div className="bg-gray-100 h-screen">
@@ -32,4 +32,4 @@ function success() {
   );
 }
 
-export default success;
+export default Success;
