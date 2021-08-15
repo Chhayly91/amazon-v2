@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import ProductFeed from "../components/ProductFeed";
 import { getSession } from "next-auth/client";
+import Footer from "../components/Footer";
 
 export default function Home({ products }) {
   // console.log(typeof products);
@@ -22,6 +23,9 @@ export default function Home({ products }) {
         {/* Product feeds */}
         <ProductFeed products={products} />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
